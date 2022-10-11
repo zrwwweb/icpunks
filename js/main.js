@@ -17,13 +17,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 var closeModal = document.querySelector('.modal__btn-close');
 var modal = document.querySelector('.modal');
 var btns = document.querySelectorAll('.btn');
-closeModal.addEventListener('click', function () {
-  modal.classList.remove('modal_visible');
-});
 btns.forEach(function (el) {
   el.addEventListener('click', function () {
     modal.classList.add('modal_visible');
+    document.querySelector('body').classList.add('stop-scroll');
   });
+});
+closeModal.addEventListener('click', function () {
+  modal.classList.remove('modal_visible');
+  document.querySelector('body').classList.remove('stop-scroll');
 }); // inputmask
 
 var form = document.querySelectorAll('.form');

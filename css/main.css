@@ -50,6 +50,7 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
+  height: 100%;
 }
 
 *,
@@ -64,6 +65,7 @@ body {
   font-size: 18px;
   background-color: #1D1D1E;
   overflow-x: hidden;
+  height: 100%;
 }
 
 img {
@@ -99,12 +101,8 @@ h6 {
   display: flex;
 }
 
-.site-container {
+.stop-scroll {
   overflow: hidden;
-}
-
-.is-hidden {
-  display: none !important;
 }
 
 .btn-reset {
@@ -210,27 +208,14 @@ h6 {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 420px) {
+  .header__list {
+    display: none;
+  }
+}
 .header__item-body {
   display: flex;
   align-items: center;
-}
-.header__item-body svg {
-  cursor: pointer;
-  fill: var(--color-white);
-  transition: fill 0.3s ease-in-out;
-}
-.header__item-body svg:not(:last-child) {
-  margin-right: 10px;
-}
-.header__item-body svg circle {
-  stroke: white;
-  transition: stroke 0.3s ease-in-out;
-}
-.header__item-body svg circle:hover {
-  stroke: var(--color-curiousBlue);
-}
-.header__item-body svg:hover {
-  fill: var(--color-curiousBlue);
 }
 .header__phone {
   color: var(--color-white);
@@ -245,6 +230,27 @@ h6 {
 }
 .header__phone:hover {
   color: var(--color-curiousBlue);
+}
+.header__link:not(:last-child) {
+  margin-right: 10px;
+  display: inline-block;
+}
+.header__icon {
+  fill: var(--color-white);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.header__icon > circle {
+  fill: none;
+  stroke: var(--color-white);
+  transition: 0.3s;
+}
+.header__icon:hover {
+  fill: var(--color-curiousBlue);
+}
+.header__icon:hover > circle {
+  fill: none;
+  stroke: var(--color-curiousBlue);
 }
 
 .modal {
@@ -262,6 +268,15 @@ h6 {
   visibility: hidden;
   transition: 0.4s;
 }
+@media (max-height: 720px) {
+  .modal {
+    overflow-y: auto;
+    padding-top: 200px;
+  }
+}
+.modal .just-validate-error-field {
+  border: 2px solid #b81111;
+}
 .modal_visible {
   opacity: 1;
   visibility: visible;
@@ -271,11 +286,24 @@ h6 {
   padding-top: 20px;
   border-radius: 10px;
   background-color: var(--color-white);
-  max-height: 700px;
+  min-height: 700px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.modal__text-area {
+  resize: none;
+  border: 2px solid var(--color-primary);
+  width: 100%;
+  border-radius: 5px;
+  height: 140px;
+}
+@media (max-height: 720px) {
+  .modal__text-area {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 .modal__btn-close {
   position: relative;
