@@ -26,7 +26,24 @@ btns.forEach(function (el) {
 closeModal.addEventListener('click', function () {
   modal.classList.remove('modal_visible');
   document.querySelector('body').classList.remove('stop-scroll');
-}); // inputmask
+});
+var scrollItems = document.querySelectorAll('.scroll-item');
+window.addEventListener('scroll', checkItems);
+checkItems();
+
+function checkItems() {
+  var triggetBottom = window.innerHeight / 5 * 4;
+  scrollItems.forEach(function (item) {
+    var itemTop = item.getBoundingClientRect().top;
+
+    if (itemTop < triggetBottom) {
+      item.classList.add('animation-class');
+    } else {
+      item.classList.remove('animation-class');
+    }
+  });
+} // inputmask
+
 
 var form = document.querySelectorAll('.form');
 var telSelector = document.querySelector('.modal__input-tel');
