@@ -200,6 +200,241 @@ h6 {
   padding-top: 10px;
 }
 
+@-webkit-keyframes flash {
+  0% {
+    transform: skewX(-45deg) translateX(40px);
+  }
+  10% {
+    transform: skewX(-45deg) translateX(300px);
+  }
+  11% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0% {
+    transform: skewX(-45deg) translateX(40px);
+  }
+  10% {
+    transform: skewX(-45deg) translateX(300px);
+  }
+  11% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(35deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  75% {
+    transform: rotate(35deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+@-webkit-keyframes rotate2 {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(35deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(35deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+@-webkit-keyframes moveLeftRight {
+  0% {
+    transform: translateX(10px);
+  }
+  25% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(10px);
+  }
+  25% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes moveBack {
+  0% {
+    transform: translateX(10px);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(30px);
+  }
+  100% {
+    margin-left: 0px;
+    transform: translateX(10px);
+  }
+}
+@keyframes moveBack {
+  0% {
+    transform: translateX(10px);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(30px);
+  }
+  100% {
+    margin-left: 0px;
+    transform: translateX(10px);
+  }
+}
+@-webkit-keyframes moveLeft {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 .header {
   padding: 20px 0;
 }
@@ -448,8 +683,8 @@ h6 {
   position: absolute;
   left: 0;
   top: -45px;
-  -webkit-animation: rotate 10s infinite;
-  animation: rotate 10s infinite;
+  -webkit-animation: rotate 20s infinite;
+  animation: rotate 20s infinite;
 }
 @media (max-width: 1300px) {
   .hero__decor-glasses {
@@ -460,8 +695,8 @@ h6 {
   position: absolute;
   top: -40px;
   left: 55%;
-  -webkit-animation: moveLeftRight 10s infinite, rotate 10s infinite;
-  animation: moveLeftRight 10s infinite, rotate 10s infinite;
+  -webkit-animation: moveLeftRight 20s infinite, rotate 30s infinite;
+  animation: moveLeftRight 20s infinite, rotate 30s infinite;
 }
 @media (max-width: 768px) {
   .hero__decor-helmet-blue {
@@ -517,8 +752,8 @@ h6 {
   position: absolute;
   bottom: -100px;
   left: -20px;
-  -webkit-animation: moveBack 10s infinite;
-  animation: moveBack 10s infinite;
+  -webkit-animation: moveLeft 10s infinite;
+  animation: moveLeft 10s infinite;
 }
 @media (max-width: 1300px) {
   .hero__decor-helmet-red {
@@ -527,217 +762,6 @@ h6 {
   }
 }
 
-@-webkit-keyframes flash {
-  0% {
-    transform: skewX(-45deg) translateX(40px);
-  }
-  10% {
-    transform: skewX(-45deg) translateX(300px);
-  }
-  11% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes flash {
-  0% {
-    transform: skewX(-45deg) translateX(40px);
-  }
-  10% {
-    transform: skewX(-45deg) translateX(300px);
-  }
-  11% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(15deg);
-  }
-  25% {
-    transform: rotate(25deg);
-  }
-  50% {
-    transform: rotate(45deg);
-  }
-  75% {
-    transform: rotate(35deg);
-  }
-  100% {
-    transform: rotate(15deg);
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(15deg);
-  }
-  25% {
-    transform: rotate(25deg);
-  }
-  50% {
-    transform: rotate(45deg);
-  }
-  75% {
-    transform: rotate(35deg);
-  }
-  100% {
-    transform: rotate(15deg);
-  }
-}
-@-webkit-keyframes rotate2 {
-  0% {
-    transform: rotate(10deg);
-  }
-  25% {
-    transform: rotate(20deg);
-  }
-  50% {
-    transform: rotate(-5deg);
-  }
-  75% {
-    transform: rotate(35deg);
-  }
-  100% {
-    transform: rotate(15deg);
-  }
-}
-@keyframes rotate2 {
-  0% {
-    transform: rotate(10deg);
-  }
-  25% {
-    transform: rotate(20deg);
-  }
-  50% {
-    transform: rotate(-5deg);
-  }
-  75% {
-    transform: rotate(35deg);
-  }
-  100% {
-    transform: rotate(15deg);
-  }
-}
-@-webkit-keyframes moveLeftRight {
-  0% {
-    transform: translateX(0deg);
-    margin-left: 10px;
-  }
-  25% {
-    transform: translateX(30deg);
-    margin-left: 30px;
-  }
-  50% {
-    transform: translateX(-10deg);
-    margin-left: -10px;
-  }
-  75% {
-    transform: translateX(20deg);
-    margin-left: 20px;
-  }
-  100% {
-    transform: translateX(0deg);
-    margin-left: 10px;
-  }
-}
-@keyframes moveLeftRight {
-  0% {
-    transform: translateX(0deg);
-    margin-left: 10px;
-  }
-  25% {
-    transform: translateX(30deg);
-    margin-left: 30px;
-  }
-  50% {
-    transform: translateX(-10deg);
-    margin-left: -10px;
-  }
-  75% {
-    transform: translateX(20deg);
-    margin-left: 20px;
-  }
-  100% {
-    transform: translateX(0deg);
-    margin-left: 10px;
-  }
-}
-@-webkit-keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.2);
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.4);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(1.2);
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: scale(1.4);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@-webkit-keyframes moveBack {
-  0% {
-    transform: translateX(10px);
-  }
-  25% {
-    transform: translateX(20px);
-  }
-  50% {
-    transform: translateX(-20px);
-  }
-  75% {
-    transform: translateX(30px);
-  }
-  100% {
-    margin-left: 0px;
-    transform: translateX(10px);
-  }
-}
-@keyframes moveBack {
-  0% {
-    transform: translateX(10px);
-  }
-  25% {
-    transform: translateX(20px);
-  }
-  50% {
-    transform: translateX(-20px);
-  }
-  75% {
-    transform: translateX(30px);
-  }
-  100% {
-    margin-left: 0px;
-    transform: translateX(10px);
-  }
-}
 .special__section {
   padding-top: 93px;
   padding-bottom: 116px;
@@ -843,8 +867,8 @@ h6 {
   max-width: 700px;
   left: -100px;
   top: 40%;
-  -webkit-animation: rotate2 30s infinite, moveLeftRight 10s infinite;
-  animation: rotate2 30s infinite, moveLeftRight 10s infinite;
+  -webkit-animation: moveLeft 15s infinite;
+  animation: moveLeft 15s infinite;
 }
 @media (max-width: 1300px) {
   .plan__decor-hat {
@@ -982,8 +1006,8 @@ h6 {
   position: absolute;
   top: -60px;
   right: -50px;
-  -webkit-animation: rotate2 50s infinite, moveBack 10s infinite;
-  animation: rotate2 50s infinite, moveBack 10s infinite;
+  -webkit-animation: rotate 50s infinite;
+  animation: rotate 50s infinite;
 }
 @media (max-width: 1300px) {
   .message__decor-helmet-blue {
